@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Archiv</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/ajaxfunctions.js"></script>
+</head>
+<body>
+<div class="centerdiv">
+<header><h1>Video Archiv</h1></header>
+<section class="left">
+<h1>Neues Video anlegen</h1>
+<p>
+<form id="newVideo">
+<label>Titel:</label>
+<input type="text" name="title" required="required" >
+<label>Beschreibung:</label>
+<textarea name="description" required="required" rows="10"></textarea>
+<label>Altersbeschränkung:</label>
+<input type="text" name="agerating" required="required">
+<label>Genre:</label>
+<input type="text" name="genre" required="required">
+<br>
+<input type="submit" id="newVideoButton">
+</form>
+</p>
+</section>
+<section class="right">
+<h1>Meine Videos</h1>
+<p>
+<button id="loadtable">Laden</button>
+<table id="videotable" class="display" cellspacing="0" width="100%">
+<thead>
+<tr>
+<th>title</th>
+<th>description</th>
+<th>agerating</th>
+<th>genre</th>
+</tr>
+</thead>
+</table>
+</p>
+</section>
+<footer>Copyright (c) - 2017 by Me!</footer>
+</div>
+</body>
+</html>
