@@ -22,8 +22,7 @@ var formData = {
 
 // process the form
 $.ajax({
-type : 'POST', // define the type of HTTP verb we want to
-use (POST for our form)
+type : 'POST', // define the type of HTTP verb we want to use (POST for our form)
 contentType : 'application/json',
 url : '/videos', // url where we want to POST
 data : JSON.stringify(formData), // data we want to POST
@@ -34,8 +33,7 @@ error: function( jqXhr, textStatus, errorThrown ){
 console.log(errorThrown);
 }
 });
-// stop the form from submitting the normal way and refreshing the
-page
+// stop the form from submitting the normal way and refreshing the page
 event.preventDefault();
 }
 
