@@ -20,8 +20,8 @@
 
   <!-- Checks for whitespace                               -->
   <!-- See http://checkstyle.org/config_whitespace.html -->
-  <module name="FileTabCharacter">
-    <property name="eachLine" value="true" />
+  <module name="WhiteSpaceAround">
+    <property name="tokens" value="Assign" />
   </module>
 
 </module>
