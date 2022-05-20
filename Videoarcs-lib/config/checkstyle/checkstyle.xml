@@ -20,10 +20,8 @@
 
   <!-- Checks for whitespace                               -->
   <!-- See http://checkstyle.org/config_whitespace.html -->
-
-
-<module name="WhiteSpaceAround">
-  <property name="tokens" value="ASSIGN"/>
-</module>
+  <module name="WhitespaceAround">
+    <property name="tokens" value="ASSIGN" />
+  </module>
 
 </module>
