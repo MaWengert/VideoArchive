@@ -31,17 +31,17 @@ public class PersonController {
 		return personService.getPerson(id);
 	}
 
-	@RequestMapping(method=RequestMethod.POST, value="/persons") 
+	@RequestMapping(method  =  RequestMethod.POST, value = "/persons") 
 	public void addPerson(@RequestBody Person person) {
 		personService.addPerson(person);
 	}
 
-	@RequestMapping(method=RequestMethod.PUT, value="/persons/{id}")
+	@RequestMapping(method = RequestMethod.PUT, value = "/persons/{id}")
 	public void updatePerson(@PathVariable String id, @RequestBody Person person) {
 		personService.updatePerson(id, person);
 	}
 
-	@RequestMapping(method=RequestMethod.DELETE, value="/persons/{id}")
+	@RequestMapping(method = RequestMethod.DELETE, value = "/persons/{id}")
 	public void deletePerson(@PathVariable String id) {
 		personService.deletePerson(id);
 		

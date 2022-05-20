@@ -27,17 +27,17 @@ public class VideoController {
 		return videoService.getVideo(title);
 	}
 
-	@RequestMapping(method=RequestMethod.POST, value = "/videos") 
+	@RequestMapping(method = RequestMethod.POST, value  =  "/videos") 
 	public void addVideo(@RequestBody Video video) {
 		videoService.addVideo(video);
 	}
 
-	@RequestMapping(method = RequestMethod.PUT, value = "/videos/{title}")
+	@RequestMapping(method  =  RequestMethod.PUT, value  =  "/videos/{title}")
 	public void updateVideo(@PathVariable String title, @RequestBody Video video) {
 		videoService.updateVideo(title, video);
 	}
 
-	@RequestMapping(method=RequestMethod.DELETE, value="/videos/{title}")
+	@RequestMapping(method = RequestMethod.DELETE, value = "/videos/{title}")
 	public void deleteVideo(@PathVariable String title) {
 		videoService.deleteVideo(title);
 	}
