@@ -23,5 +23,6 @@
   <module name="FileTabCharacter">
     <property name="eachLine" value="true" />
   </module>
+  <module name="WhitespaceAround"/>
 
 </module>
