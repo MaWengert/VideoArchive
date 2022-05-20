@@ -15,8 +15,8 @@ public class VideoService {
 	private VideoRepository videoRepository;
 
 	public List<Video> getVideoList() {
-		ArrayList<Video> mylist= new ArrayList<>();
-		Iterator<Video> it = videoRepository.findAll().iterator();
+		ArrayList<Video> mylist =  new ArrayList<>();
+		Iterator<Video> it  =  videoRepository.findAll().iterator();
 		while(it.hasNext()) 
 			mylist.add(it.next());
 		return mylist;

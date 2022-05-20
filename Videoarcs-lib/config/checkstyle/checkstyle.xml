@@ -20,8 +20,10 @@
 
   <!-- Checks for whitespace                               -->
   <!-- See http://checkstyle.org/config_whitespace.html -->
-  <module name="WhitespaceAround">
-    <property name="tokens" value="ASSIGN" />
+  <module name = "TreeWalker"> 
+	  <module name="WhitespaceAround">
+		<property name="tokens" value="ASSIGN" />
+	  </module>
   </module>
 
 </module>
