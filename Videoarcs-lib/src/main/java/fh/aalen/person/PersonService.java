@@ -17,7 +17,7 @@ public class PersonService {
 	private PersonRepository personRepository; 
 	
 	public List<Person> getPersons() {
-		ArrayList<Person> mylist = new ArrayList<>();
+		ArrayList<Person> mylist= new ArrayList<>();
 		Iterator<Person> it = personRepository.findAll().iterator();
 		while(it.hasNext()) 
 			mylist.add(it.next());
