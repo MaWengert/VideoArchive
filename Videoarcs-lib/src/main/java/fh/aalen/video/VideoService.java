@@ -26,8 +26,14 @@ public class VideoService {
 		return videoRepository.findById(title).orElse(null);
 	}
 
-	public void addVideo(Video video) {
-		videoRepository.save(video);
+	public void addVideo(Video video){
+		try {
+			checkAgeRatingValidity(video);
+			videoRepository.save(video);
+		}catch(NumberFormatException e) {
+			System.out.println("Invalid agerating argument");
+		}
+
 	}
 
 	public void updateVideo(String title, Video video) {
@@ -40,13 +46,18 @@ public class VideoService {
 	public List<Video> getAllVideosOfGenre(String genre){
 		return videoRepository.findByGenreOrderByTitle(genre); 
 	}
-	
+
 	public List<Video> getAllVideosOfAgeRating(String ageRating){
 		return videoRepository.findByAgeRatingOrderByTitle(ageRating); 
 	}
-	
+
 	public List<GenresOnly> getAllGenres(){
 		return videoRepository.findAllProjectedBy(); 
 	}
 
+
+	public void checkAgeRatingValidity(Video vid) throws NumberFormatException {
+		int ageRating = Integer.parseInt(vid.getAgeRating());
+	}
+	
 }
