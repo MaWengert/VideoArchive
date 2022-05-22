@@ -15,7 +15,7 @@ import org.junit.jupiter.api.BeforeEach;
 class VideoTest {
 	
     @Test void checkAgeRatingValidityTest() {
-		Video vid = new Video("Test", "12", "Test", "Test"); 
+		Video vid = new Video("Test", "ageRating", "Test", "Test"); 
 		VideoService v = new VideoService(); 
         assertThrows(NumberFormatException.class, ()->{
         	v.checkAgeRatingValidity(vid); 
