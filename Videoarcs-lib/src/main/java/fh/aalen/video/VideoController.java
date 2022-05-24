@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class VideoController {
-	
+
 	@Autowired 
 	VideoService videoService;
 
@@ -32,6 +32,7 @@ public class VideoController {
 		videoService.addVideo(video);
 	}
 
+
 	@RequestMapping(method  =  RequestMethod.PUT, value  =  "/videos/{title}")
 	public void updateVideo(@PathVariable String title, @RequestBody Video video) {
 		videoService.updateVideo(title, video);
@@ -41,21 +42,22 @@ public class VideoController {
 	public void deleteVideo(@PathVariable String title) {
 		videoService.deleteVideo(title);
 	}
-	
+
 	@RequestMapping("/videosbygenre/{genre}")
 	public List<Video> getAllVideosOfGenre(@PathVariable String genre){
 		return videoService.getAllVideosOfGenre(genre); 
 	}
-	
+
 	@RequestMapping("/videosbyage/{ageRating}")
 	public List<Video> getAllVideosOfAgeRating(@PathVariable String ageRating){
 		return videoService.getAllVideosOfAgeRating(ageRating); 
 	}
-	
+
 	@RequestMapping("/videogenres")
 	public List<GenresOnly> getAllGenres(){
 		return videoService.getAllGenres(); 
 	}
-	
-	
+
+
+
 }
