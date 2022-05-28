@@ -37,7 +37,7 @@ public class Person {
 	public void setSurename(String surename) {
 		this.surename = surename;
 	}
-
+// 
 	public String getBirthdate() {
 		return birthdate;
 	}
