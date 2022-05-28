@@ -8,7 +8,6 @@ import java.util.Iterator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fh.aalen.video.Video;
 
 @Service
 public class PersonService {
